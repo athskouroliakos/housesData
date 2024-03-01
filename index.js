@@ -37,6 +37,13 @@ const housesData = [
     animal: 'Badger',
     color: 'Yellow and Black',
   },
+  {
+    id: uuidv4(),
+    name: 'Color Undefined',
+    founder: 'founder',
+    animal: 'animal',
+    color: 'undefined',
+  },
 ];
 
 app.get('/houses', (req, res) => {

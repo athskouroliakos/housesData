@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 });
 
 //Add new House
-const addHouse = (newHouse) => {
+/*const addHouse = (newHouse) => {
   housesData.push(newHouse);
 };
 
@@ -25,5 +25,6 @@ router.post('/', (req, res) => {
   addHouse(newHouse);
   res.json({ message: 'House added successfully', newHouse });
 });
+*/
 
 module.exports = router;

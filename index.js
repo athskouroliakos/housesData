@@ -39,16 +39,9 @@ const housesData = [
   },
   {
     id: uuidv4(),
-    name: 'Color Undefined',
+    name: 'House',
     founder: 'founder',
     animal: 'animal',
-    color: 'undefined',
-  },
-  {
-    id: uuidv4(),
-    name: 'Color Undefined2',
-    founder: 'founder2',
-    animal: 'animal2',
     color: 'undefined',
   },
 ];

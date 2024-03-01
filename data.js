@@ -36,7 +36,7 @@ const housesData = [
     animal: 'animal',
     color: 'undefined',
   },
-   {
+  /* {
     id: uuidv4(),
     name: 'House',
     founder: 'founder',
@@ -119,7 +119,7 @@ const housesData = [
     founder: 'founder',
     animal: 'animal',
     color: 'undefined',
-  },
+  },*/
 ];
 
 module.exports = housesData;

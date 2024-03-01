@@ -1,4 +1,3 @@
-// routes/houses.js
 const express = require('express');
 const housesData = require('../data');
 

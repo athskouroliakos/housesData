@@ -3,14 +3,10 @@ const cors = require('cors');
 const houseRoutes = require('./routes/houses');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
 app.use(cors());
 app.use('/houses', houseRoutes);
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
 
 //Error handling
 app.use((err, req, res, next) => {

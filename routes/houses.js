@@ -15,18 +15,13 @@ router.get('/', (req, res) => {
   res.json(housesData);
 });
 
+//Add new House
 const addHouse = (newHouse) => {
   housesData.push(newHouse);
 };
 
-router.post('/houses', (req, res) => {
-  const newHouse = {
-    id: uuidv4(),
-    name: 'House',
-    founder: 'founder',
-    animal: 'animal',
-    color: 'undefined',
-  };
+router.post('/', (req, res) => {
+  const newHouse = req.body;
   addHouse(newHouse);
   res.json({ message: 'House added successfully', newHouse });
 });

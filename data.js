@@ -28,21 +28,7 @@ const housesData = [
     founder: 'Helga Hufflepuff',
     animal: 'Badger',
     color: 'Yellow and Black',
-  },
-  {
-    id: uuidv4(),
-    name: 'House',
-    founder: 'founder',
-    animal: 'animal',
-    color: 'undefined',
-  },
-  /* {
-    id: uuidv4(),
-    name: 'House',
-    founder: 'founder',
-    animal: 'animal',
-    color: 'undefined',
-  },
+  } /*  
   {
     id: uuidv4(),
     name: 'House',
@@ -63,7 +49,7 @@ const housesData = [
     founder: 'founder',
     animal: 'animal',
     color: 'undefined',
-  },
+  } 
   {
     id: uuidv4(),
     name: 'House',
@@ -119,7 +105,42 @@ const housesData = [
     founder: 'founder',
     animal: 'animal',
     color: 'undefined',
-  },*/
+  },
+  {
+    id: uuidv4(),
+    name: 'House',
+    founder: 'founder',
+    animal: 'animal',
+    color: 'undefined',
+  },
+  {
+    id: uuidv4(),
+    name: 'House',
+    founder: 'founder',
+    animal: 'animal',
+    color: 'undefined',
+  },
+  {
+    id: uuidv4(),
+    name: 'House',
+    founder: 'founder',
+    animal: 'animal',
+    color: 'undefined',
+  },
+  {
+    id: uuidv4(),
+    name: 'House',
+    founder: 'founder',
+    animal: 'animal',
+    color: 'undefined',
+  },
+  {
+    id: uuidv4(),
+    name: 'House',
+    founder: 'founder',
+    animal: 'animal',
+    color: 'undefined',
+  },*/,
 ];
 
 module.exports = housesData;

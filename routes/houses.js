@@ -43,22 +43,11 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   const { id } = req.params;
   const updatedHouseData = req.body;
-
-  // Map over housesData array and update the house with the specified ID
-  const updatedHousesData = housesData.map((house) => {
-    if (house.id === id) {
-      return { ...house, ...updatedHouseData };
-    }
-    return house;
-  });
-
-  // Check if the house with the specified ID was found and updated
-  const updatedHouse = updatedHousesData.find((house) => house.id === id);
-  if (updatedHouse) {
-    // If the house was found and updated, send a success response
-    res.json({ message: 'House updated successfully', house: updatedHouse });
+  const index = housesData.findIndex((house) => house.id === id);
+  if (index !== -1) {
+    housesData[index] = { ...housesData[index], ...updatedHouseData };
+    res.json(housesData[index]);
   } else {
-    // If the house was not found, send a 404 Not Found response
     res.status(404).json({ message: 'House not found' });
   }
 });

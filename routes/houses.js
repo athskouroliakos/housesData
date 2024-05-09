@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   const { id } = req.params;
   console.log('Requested house IDD:', id); // Add this line for debugging
-  const house = housesData.find((house) => house.id === parseInt(id));
+  const house = housesData.find((house) => house.id === id);
   if (house) {
     res.json(house);
   } else {

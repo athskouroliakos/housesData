@@ -2,7 +2,7 @@ const { v4: uuidv4 } = require('uuid');
 
 const housesData = [
   {
-    id: 1,
+    id: uuidv4(),
     name: 'Gryffindor',
     founder: 'Godric Gryffindor',
     animal: 'Lion',

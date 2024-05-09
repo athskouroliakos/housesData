@@ -39,4 +39,17 @@ router.post('/', (req, res) => {
   }
 });
 
+// Update a house by its ID
+router.put('/:id', (req, res) => {
+  const { id } = req.params;
+  const updatedHouseData = req.body;
+  const index = housesData.findIndex((house) => house.id === id);
+  if (index !== -1) {
+    housesData[index] = { ...housesData[index], ...updatedHouseData };
+    res.json(housesData[index]);
+  } else {
+    res.status(404).json({ message: 'House not found' });
+  }
+});
+
 module.exports = router;

@@ -33,6 +33,8 @@ router.post('/', (req, res) => {
   // Add validation if necessary
 
   // Generate a new UUID for the house ID
+  const newId = uuidv4();
+  newHouse.id = newId;
 
   // Add the new house to the data array
   housesData.push(newHouse);

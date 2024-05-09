@@ -32,8 +32,6 @@ router.post('/', (req, res) => {
   try {
     const newHouse = req.body;
     const newId = uuidv4();
-    newHouse.id = newId;
-    housesData.push(newHouse);
     res.status(201).json(newHouse);
   } catch (error) {
     console.error('Error creating new house:', error);

@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 // Fetch a house by its ID
 router.get('/:id', (req, res) => {
   const { id } = req.params;
-  console.log('Requested house ID:', id); // Add this line for debugging
+  console.log('Requested house IDD:', id); // Add this line for debugging
   const house = housesData.find((house) => house.id === parseInt(id));
   if (house) {
     res.json(house);

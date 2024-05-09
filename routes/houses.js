@@ -1,6 +1,5 @@
 const express = require('express');
 const housesData = require('../data');
-const { v4: uuidv4 } = require('uuid');
 
 const router = express.Router();
 
@@ -32,8 +31,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   try {
     const newHouse = req.body;
-    const newId = uuidv4();
-    return res.status(201).json(newHouse);
+    res.status(201).json(newHouse);
   } catch (error) {
     console.error('Error creating new house:', error);
     res.status(500).json({ message: 'Failed to create new house' });

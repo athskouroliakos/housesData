@@ -5,9 +5,9 @@ const houseRoutes = require('./routes/houses');
 const app = express();
 const PORT = 3001;
 
+app.use(express.json());
 app.use(cors());
 app.use('/houses', houseRoutes);
-
 
 //Error handling
 app.use((err, req, res, next) => {

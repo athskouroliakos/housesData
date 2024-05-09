@@ -27,4 +27,17 @@ router.get('/:id', (req, res) => {
   }
 });
 
+// Create a new house
+router.post('/', (req, res) => {
+  const newHouse = req.body; // Assuming you'll send the new house details in the request body
+  // Add validation if necessary
+
+  // Generate a new UUID for the house ID
+
+  // Add the new house to the data array
+  housesData.push(newHouse);
+
+  res.status(201).json(newHouse); // Respond with the newly created house
+});
+
 module.exports = router;

@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
   try {
     const newHouse = req.body;
     const newId = uuidv4();
-    res.status(201).json(newHouse);
+    return res.status(201).json(newHouse);
   } catch (error) {
     console.error('Error creating new house:', error);
     res.status(500).json({ message: 'Failed to create new house' });

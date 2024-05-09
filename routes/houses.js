@@ -52,4 +52,16 @@ router.put('/:id', (req, res) => {
   }
 });
 
+// Delete a house by its ID
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  const index = housesData.findIndex((house) => house.id === id);
+  if (index !== -1) {
+    const deletedHouse = housesData.splice(index, 1);
+    res.json(deletedHouse[0]);
+  } else {
+    res.status(404).json({ message: 'House not found' });
+  }
+});
+
 module.exports = router;
